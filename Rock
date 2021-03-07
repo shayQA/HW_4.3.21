@@ -1,0 +1,9 @@
+package com.company;
+
+public class Rock implements ITossable {
+
+    @Override
+    public void toss() {
+
+    }
+}
