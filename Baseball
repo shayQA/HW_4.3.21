@@ -1,0 +1,17 @@
+package com.company;
+
+public class Baseball extends Ball implements ITossable {
+    public Baseball(String brandName) {
+        super(brandName);
+    }
+
+    @Override
+    public void bounce(String str) {
+        super.bounce(str);
+    }
+
+    @Override
+    public void toss() {
+
+    }
+}
