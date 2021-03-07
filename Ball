@@ -1,0 +1,20 @@
+package com.company;
+
+public abstract class Ball implements ITossable {
+    protected String brandName;
+
+    public Ball(String brandName) {
+        this.brandName = brandName;
+    }
+
+    public void getBrandName(String str)
+    {
+        System.out.println(str);
+    }
+
+    public void bounce(String str)
+    {
+        System.out.println(str);
+    }
+
+}
