@@ -1,0 +1,49 @@
+package com.company;
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.Random;
+
+public class Main {
+    //1
+    public static int find_last_index(ArrayList numbers,int num)
+    {
+        int last_index=-1;
+        for(int i=0;i<numbers.size();i++)
+        {
+            if((int) numbers.get(i)==num)
+                last_index = i;
+        }
+        return last_index;
+    }
+    //2
+    public static ArrayList all_indexes(ArrayList numbers,int num)
+    {
+        ArrayList<Integer> new_array=new ArrayList<>();
+        for(int i=0;i<numbers.size();i++)
+        {
+            if((int) numbers.get(i)==num) {
+                new_array.add(i);
+            }
+        }
+        return new_array;
+    }
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        ArrayList<Integer> numbers= new ArrayList<>();
+        for(int i=0;i<9;i++) {
+            System.out.println("Please enter a number to array list: ");
+            numbers.add(s.nextInt());
+        }
+        System.out.println("Please enter a number to find in the array list: ");
+        int num=s.nextInt();
+        int returned_num=find_last_index(numbers,num);
+        if(returned_num==-1)
+            System.out.println("The number you picked was not in the array list.");
+        else
+            System.out.println("Last index: "+returned_num);
+        System.out.println("Please enter a number to find in the array list: ");
+        num=s.nextInt();
+        System.out.println(all_indexes(numbers,num));
+    }
+
+}
